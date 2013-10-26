@@ -4,5 +4,5 @@ for file in `ls extracted*`; do
     continue
   fi
   echo 'Filtering file ' $file
-  time egrep '^[a-zA-Z]+\t' $file > alphabetic-$file
+  time egrep '^[a-zA-Z ]+\t' $file > alphabetic-$file
 done
