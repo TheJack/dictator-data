@@ -51,6 +51,16 @@ var startServing = function () {
     res.json(Object.keys(words));
     console.log(Object.keys(words));
   });
+
+  app.get('/wordFrequency/:word', function (req, res) {
+    var word = req.param('word');
+    var res = 1;
+    if (wordFrequency.hasOwnProperty(word)) {
+      res = wordFrequency[word];
+    }
+    res.json(word);
+  });
+
   app.listen(3002, function () {
     console.log('Listening...');
   });
