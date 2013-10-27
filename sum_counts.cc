@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
       lastCount += count;
     } else {
       if (lastCount != 0) {
-        fprintf(out, "%s %lld\n", lastWord.c_str(), lastCount);
+        fprintf(out, "%s\t%lld\n", lastWord.c_str(), lastCount);
       }
       lastCount = count;
       lastWord = word;
